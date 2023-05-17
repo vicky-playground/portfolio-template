@@ -5,7 +5,7 @@ A simple portfolio website built with Streamlit. The website is deployed [here](
 ```
 pip install -r requirements.txt
 ```
-💡 If `[Errno 2] No such file or directory: 'requirements.txt'` occurs, create a requirements file with the below command.
+💡 If `[Errno 2] No such file or directory: 'requirements.txt'` occurs, create a requirements file with the below command first.
 ```
 pip freeze > requirements.txt
 ```
