@@ -20,7 +20,7 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
         
-local_css("website-main/style/style.css")
+local_css("style/style.css")
 
 lottie_gif = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_zboivc9e.json")
 
@@ -63,7 +63,7 @@ with st.container():
     st.subheader('📌 Career Snapshot')
 
     # load data
-    with open('website-main/example.json', "r") as f:
+    with open('example.json', "r") as f:
         data = f.read()
 
     # render timeline
