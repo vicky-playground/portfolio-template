@@ -1,5 +1,5 @@
 # Portfolio Website
-A simple portfolio website built with Streamlit. The website is deployed [here](https://vicky-playground-portfolio-template-website-main1--home-w9slt5.streamlit.app/).
+A simple portfolio website built with Streamlit. The website is deployed [here](https://vicky-playground-portfolio-template-1--home-ehxx2f.streamlit.app/).
 
 ## Installation
 ```
