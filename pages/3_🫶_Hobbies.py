@@ -4,9 +4,9 @@ from constant import *
 
 st.sidebar.markdown(info['Photo'],unsafe_allow_html=True)
 
-img_1 = Image.open("website-main/images/1.jpg")
-img_2 = Image.open("website-main/images/2.png")
-img_3 = Image.open("website-main/images/3.png")
+img_1 = Image.open("images/1.jpg")
+img_2 = Image.open("images/2.png")
+img_3 = Image.open("images/3.png")
 
 st.title("🫶 Hobbies")
 
