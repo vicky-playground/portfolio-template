@@ -1,6 +1,10 @@
 # Portfolio Website
 A simple portfolio website built with Streamlit. The website is deployed [here](https://vicky-playground-portfolio-template-1--home-ehxx2f.streamlit.app/).
 
+# Copy thiss repo
+```
+git clone https://github.com/vicky-playground/portfolio-template
+```
 ## Installation
 ```
 pip install -r requirements.txt
