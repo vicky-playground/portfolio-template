@@ -26,19 +26,18 @@ lottie_gif = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_x17yb
 
 # ----------------- info ----------------- #
 with st.container():
-    left_column,right_column = st.columns([0.7,0.3])
+    col1,col2 = st.columns(2)
     
     def gradient(color1, color2, color3, content):
-     st.markdown(f'<h1 style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});color:{color3};font-size:24px;border-radius:2%;">{content}</h1>', unsafe_allow_html=True)
+     st.markdown(f'<h1 style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});color:{color3};font-size:60px;border-radius:2%;">{content}</h1>', unsafe_allow_html=True)
 
-    with left_column:
-        st.subheader("Hi, I am Vicky :wave:")
-        gradient('#FFD4DD','#000395','e0fbfc',"Passion for improving product and CX by digging into data!")
-        st.markdown("""""")
+    with col1:
+        gradient('#FFD4DD','#000395','e0fbfc',"I'm' Vicky")
+        st.markdown("""<p style="color:#FFD4DD; font-size:20px"><br>Passion for improving product and CX by digging into data!</p>""", unsafe_allow_html=True)
         st.write(info['Brief'])
-
-    with right_column:
-        st_lottie(lottie_gif, height=300, key="coding")
+        
+    with col2:
+        st_lottie(lottie_gif, height=300, key="data")
 
 # ----------------- skillset ----------------- #
 with st.container():
@@ -64,6 +63,7 @@ with st.container():
     
 # ----------------- timeline ----------------- #
 with st.container():
+    st.markdown("""""")
     st.subheader('📌 Career Snapshot')
 
     # load data
@@ -75,6 +75,7 @@ with st.container():
 
 # -----------------  tableau  -----------------  #
 with st.container():
+    st.markdown("""""")
     st.subheader("📊 Tableau")
     col1,col2 = st.columns([0.95, 0.05])
     with col1:
@@ -95,6 +96,7 @@ with st.container():
     
 # ----------------- medium ----------------- #
 with st.container():
+    st.markdown("""""")
     st.subheader('✍️ Medium')
     page = requests.get(info['Medium'])
     col1,col2 = st.columns([0.95, 0.05])
