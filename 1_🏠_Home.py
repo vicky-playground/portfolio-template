@@ -9,7 +9,7 @@ st.set_page_config(page_title='Vicky Kuo' ,layout="wide",page_icon='👧🏻')
 
 # -----------------  loading assets  ----------------- #
 st.sidebar.markdown(info['Photo'],unsafe_allow_html=True)
-
+    
 def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code != 200:
@@ -27,10 +27,14 @@ lottie_gif = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_zboiv
 # ----------------- info ----------------- #
 with st.container():
     left_column,right_column = st.columns(2)
+    
+    def gradient(color1, color2, color3, content):
+     st.markdown(f'<h1 style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});color:{color3};font-size:24px;border-radius:2%;">{content}</h1>', unsafe_allow_html=True)
 
     with left_column:
         st.subheader("Hi, I am Vicky :wave:")
-        st.header(":red[Passion for improving product and CX by digging into data!]")
+        gradient('#FFD4DD','#000395','e0fbfc',"Passion for improving product and CX by data!")
+        st.markdown("""""")
         st.write(info['Brief'])
 
     with right_column:
