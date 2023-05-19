@@ -33,7 +33,7 @@ with st.container():
 
     with col1:
         gradient('#FFD4DD','#000395','e0fbfc',"I'm' Vicky")
-        st.markdown("""<p style="color:#FFD4DD; font-size:20px; text-align: center;"><br>🔥 Passion for improving product and CX by data! 🔥</p>""", unsafe_allow_html=True)
+        st.markdown("""<p style="color:#FFD4DD; font-size:20px; text-align: center;">🔥 Passion for improving product and CX by data! 🔥</p>""", unsafe_allow_html=True)
         st.write(info['Brief'])
         
     with col2:
