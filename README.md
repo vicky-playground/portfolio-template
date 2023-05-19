@@ -27,4 +27,5 @@ streamlit run 1_🏠_Home.py
 ## Sources
 * Adding Lottie animation in Streamlit WebApp: [GeeksforGeeks](https://www.geeksforgeeks.org/adding-lottie-animation-in-streamlit-webapp/)
 * Adding timeline and components: [Streamlit Library](https://docs.streamlit.io/library)
+* [Tableau JavaScript API](https://help.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm)
 * Images: [pixaboy](https://pixabay.com/)
