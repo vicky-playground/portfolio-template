@@ -1,8 +1,8 @@
 # app/Dockerfile
 
-FROM python:3.9-slim
+FROM python:3.8
 
-WORKDIR /app
+WORKDIR /portfolio-template
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -11,12 +11,13 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN COPY . . https://github.com/vicky-playground/portfolio-template.git .
+COPY . . 
+
+# copy over requirements
+COPY requirements.txt ./requirements.txt
 
 RUN python3.8 install -r requirements.txt
 
 EXPOSE 8501
-
-HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
 ENTRYPOINT ["streamlit", "run", "1_🏠_Home.py", "--server.port=8501", "--server.address=0.0.0.0"]
