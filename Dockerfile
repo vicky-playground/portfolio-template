@@ -4,11 +4,11 @@ RUN groupadd -r myuser && useradd -r -g myuser myuser
 
 USER root 
 
-COPY requirements.txt portfolio-template/requirements.txt
-RUN pip install -r portfolio-template/requirements.txt
-
 WORKDIR /portfolio-template
-COPY . /1_🏠_Home
+
+COPY . .
+
+RUN pip install -r requirements.txt
 
 EXPOSE 8501
 
@@ -16,4 +16,3 @@ ENTRYPOINT ["streamlit", "run"]
 
 CMD ["1_🏠_Home.py"]
 
-USER myuser
