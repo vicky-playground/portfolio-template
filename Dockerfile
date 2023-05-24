@@ -4,11 +4,11 @@ RUN groupadd -r myuser && useradd -r -g myuser myuser
 
 USER root 
 
-COPY requirements.txt app/requirements.txt
-RUN pip install -r app/requirements.txt
+COPY requirements.txt portfolio-template/requirements.txt
+RUN pip install -r portfolio-template/requirements.txt
 
+WORKDIR /portfolio-template
 COPY . /1_🏠_Home
-WORKDIR /1_🏠_Home
 
 EXPOSE 8501
 
