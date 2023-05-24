@@ -1,23 +1,19 @@
-# app/Dockerfile
+FROM tiangolo/uwsgi-nginx-flask:python3.10
 
-FROM python:3.8
+RUN groupadd -r myuser && useradd -r -g myuser myuser
 
-WORKDIR /portfolio-template
+USER root 
 
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    curl \
-    software-properties-common \
-    git \
-    && rm -rf /var/lib/apt/lists/*
+COPY requirements.txt app/requirements.txt
+RUN pip install -r app/requirements.txt
 
-COPY . . 
-
-# copy over requirements
-COPY requirements.txt ./requirements.txt
-
-RUN python3.8 install -r requirements.txt
+COPY . /1_🏠_Home
+WORKDIR /1_🏠_Home
 
 EXPOSE 8501
 
-ENTRYPOINT ["streamlit", "run", "1_🏠_Home.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run"]
+
+CMD ["1_🏠_Home.py"]
+
+USER myuser
