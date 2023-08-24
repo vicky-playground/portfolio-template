@@ -3,7 +3,7 @@ import requests
 from streamlit_lottie import st_lottie
 from streamlit_timeline import timeline
 import streamlit.components.v1 as components
-from constant import *
+from constant import *	
 
 st.set_page_config(page_title='Vicky Kuo' ,layout="wide",page_icon='👧🏻')
 
@@ -22,7 +22,18 @@ def local_css(file_name):
         
 local_css("style/style.css")
 
+# loading assets
 lottie_gif = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_x17ybolp.json")
+python_lottie = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_2znxgjyt.json")
+java_lottie = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_zh6xtlj9.json")
+my_sql_lottie = load_lottieurl("https://assets4.lottiefiles.com/private_files/lf30_w11f2rwn.json")
+git_lottie = load_lottieurl("https://assets9.lottiefiles.com/private_files/lf30_03cuemhb.json")
+github_lottie = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_6HFXXE.json")
+docker_lottie = load_lottieurl("https://assets4.lottiefiles.com/private_files/lf30_35uv2spq.json")
+figma_lottie = load_lottieurl("https://lottie.host/5b6292ef-a82f-4367-a66a-2f130beb5ee8/03Xm3bsVnM.json")
+aws_lottie = load_lottieurl("https://lottie.host/6eae8bdc-74d1-4b5d-9eb7-37662274cd19/Nduizk8IOf.json")
+
+
 
 # ----------------- info ----------------- #
 with st.container():
@@ -42,24 +53,24 @@ with st.container():
 # ----------------- skillset ----------------- #
 with st.container():
     st.subheader('⚒️ Skills')
-
-    def skill_tab():
-        idx = 0
-        rows = len(info['skills'])//skill_col_size
-        skills = iter(info['skills'])
-        if len(info['skills'])%skill_col_size!=0:
-            rows+=1
-        for x in range(rows):
-            columns = st.columns(skill_col_size)
-            for index_ in range(skill_col_size):
-                try:
-                    idx += 1
-                    columns[index_].button(next(skills))
-                except:
-                    break
-                
-    with st.spinner(text="In progress..."):
-        skill_tab()
+    col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
+    with col1:
+        st_lottie(python_lottie, height=70,width=70, key="python", speed=2.5)
+    with col2:
+        st_lottie(java_lottie, height=70,width=70, key="java", speed=4)
+    with col3:
+        st_lottie(my_sql_lottie,height=70,width=70, key="mysql", speed=2.5)
+    with col4:
+        st_lottie(git_lottie,height=70,width=70, key="git", speed=2.5)
+    with col1:
+        st_lottie(github_lottie,height=50,width=50, key="github", speed=2.5)
+    with col2:
+        st_lottie(docker_lottie,height=70,width=70, key="docker", speed=2.5)
+    with col3:
+        st_lottie(figma_lottie,height=50,width=50, key="figma", speed=2.5)
+    with col4:
+        st_lottie(aws_lottie,height=50,width=50, key="aws", speed=2.5)
+    
     
 # ----------------- timeline ----------------- #
 with st.container():
