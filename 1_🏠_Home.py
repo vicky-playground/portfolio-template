@@ -4,8 +4,88 @@ from streamlit_lottie import st_lottie
 from streamlit_timeline import timeline
 import streamlit.components.v1 as components
 from constant import *	
+from llama_index import SimpleDirectoryReader
+from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+from langchain import HuggingFaceHub
+from langchain.llms import HuggingFaceEndpoint
+from llama_index import GPTVectorStoreIndex
+from llama_index import LLMPredictor, ServiceContext, LangchainEmbedding
 
 st.set_page_config(page_title='Vicky Kuo' ,layout="wide",page_icon='👧🏻')
+
+with st.container():
+    # load the document
+    documents = SimpleDirectoryReader(input_files=["catalog.txt"]).load_data()
+    
+    # prepare Falcon Huggingface API
+    llm = HuggingFaceEndpoint(
+                endpoint_url= "https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct" ,
+                huggingfacehub_api_token="HUGGINGFACE_API_KEY",
+                task="text-generation",
+                model_kwargs = {
+                    "temperature":0, # a temperature of 0 makes the model deterministic. It limits the model to use the word with the highest probability. Default temperature:0.8
+                    "max_new_tokens":200 # define the maximum number of tokens the model may produce in its answer         
+                }
+            )
+    
+    # LLMPredictor: to generate the text response (Completion)
+    llm_predictor = LLMPredictor(llm=llm)
+    
+    # LangchainEmbedding: to convert text to embedding vector	
+    # Hugging Face models can be supported by using LangchainEmbedding					  
+    embed_model = LangchainEmbedding(HuggingFaceEmbeddings())
+    
+    # ServiceContext: to encapsulate the resources used to create indexes and run queries
+    service_context = ServiceContext.from_defaults(
+            llm_predictor=llm_predictor, 
+            embed_model=embed_model
+        )
+        
+    # build index
+    index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
+    
+    # use a query engine as the interface for your question
+    query_engine = index.as_query_engine(service_context=service_context)
+    
+    # Store the conversation history in a List
+    conversation_history = []
+    
+    def ask_bot(input_text):
+    
+        PROMPT_QUESTION = """
+            Your name is Portfolio Website Template, helping learners in building an AI chatbot portfolio website using Streamlit and the free LLM model.
+            Your conversation with the human is recorded in the chat history below.
+    
+            History:
+            "{history}"
+    
+            Now continue the conversation with the human. If you do not know the answer based on the chat history and the new input from the client, politely admit it and therefore you need more information.
+            Human: {input}
+            You:"""
+    
+        # update conversation history
+        global conversation_history
+        history_string = "\n".join(conversation_history)
+        print(f"history_string: {history_string}")
+        
+        # query LlamaIndex and the LLM for the AI's response
+        output = query_engine.query(PROMPT_QUESTION.format(history=history_string, input=input_text))
+        print(f"output: {output}")
+        
+        # update conversation history with user input and AI's response
+        conversation_history.append(input_text)
+        conversation_history.append(output.response)
+        
+    
+        return output.response
+    
+    # get the user's input by calling the get_text function
+    def get_text():
+        input_text = st.text_input("I'm eager to hear about potential career opportunities, so I'd be pleased to chat about job openings in the tech sphere. You can send your questions and hit Enter to know more about me after providing OpenAI API Key on the sidebar:)", key="input")
+        return input_text
+    
+    user_input = get_text()
+    st.info(ask_bot(user_input))
 
 # -----------------  loading assets  ----------------- #
 st.sidebar.markdown(info['Photo'],unsafe_allow_html=True)
