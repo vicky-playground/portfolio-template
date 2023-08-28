@@ -264,6 +264,6 @@ with st.container():
 # -----------------  footer  ----------------- #
 footer="""
 <div class="footer">
-<p>Developed with Streamlit by <a href={} target="_blank">Vicky Kuo @ IBM</a></p></div>
+<p>Developed with Streamlit by <a href={} target="_blank">Vicky Kuo</a></p></div>
 """.format(foot['url'])
 st.markdown(footer,unsafe_allow_html=True)
