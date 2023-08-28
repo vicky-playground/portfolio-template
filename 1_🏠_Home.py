@@ -47,7 +47,7 @@ with st.container():
 
 
 with col1:
-    gradient('#FFD4DD','#000395','e0fbfc',"Hi, I'm Vicky👋", "A business-focused data enthusiast relentlessly challenging the status quo")
+    gradient('#FFD4DD','#000395','e0fbfc',"Hi, I'm Vicky👋", "Lorem ipsum dolor sit amet, eu quo liber nonumes vivendum")
     st.write("")
     st.write(info['About'])
     
