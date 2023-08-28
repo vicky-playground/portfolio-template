@@ -10,17 +10,23 @@ from langchain import HuggingFaceHub
 from langchain.llms import HuggingFaceEndpoint
 from llama_index import GPTVectorStoreIndex
 from llama_index import LLMPredictor, ServiceContext, LangchainEmbedding
+import os
+from dotenv import load_dotenv
 
 st.set_page_config(page_title='Vicky Kuo' ,layout="wide",page_icon='👧🏻')
 
 with st.container():
+    
+    # Load environment variables from .env file
+    load_dotenv()
+    
     # load the document
     documents = SimpleDirectoryReader(input_files=["context.txt"]).load_data()
     
     # prepare Falcon Huggingface API
     llm = HuggingFaceEndpoint(
                 endpoint_url= "https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct" ,
-                huggingfacehub_api_token="HUGGINGFACE_API_KEY",
+                huggingfacehub_api_token=os.environ["HUGGINGFACE_API_KEY"],
                 task="text-generation",
                 model_kwargs = {
                     "temperature":0, # a temperature of 0 makes the model deterministic. It limits the model to use the word with the highest probability. Default temperature:0.8
