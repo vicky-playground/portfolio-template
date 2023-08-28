@@ -5,31 +5,46 @@ from streamlit_timeline import timeline
 import streamlit.components.v1 as components
 from constant import *	
 from llama_index import SimpleDirectoryReader
+from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+from langchain import HuggingFaceHub
+from langchain.llms import HuggingFaceEndpoint
 from llama_index import GPTVectorStoreIndex
-from llama_index import ServiceContext
-import openai
-from langchain.chat_models import ChatOpenAI
+from llama_index import LLMPredictor, ServiceContext, LangchainEmbedding
+import os
+from dotenv import load_dotenv
 
 st.set_page_config(page_title='Vicky Kuo' ,layout="wide",page_icon='👧🏻')
 
 with st.container():
     
-    openai_api_key = st.sidebar.text_input('Enter your OpenAI API Key and hit Enter', type="password")
-    openai.api_key = (openai_api_key)
-
-    # define LLM
-    llm = ChatOpenAI(
-        model_name="gpt-3.5-turbo",
-        temperature=0,
-        openai_api_key=openai.api_key,
-    )
-
-    # defile LLMPredictor
-    llm_predictor = LLMPredictor(llm=llm)
-    service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
+    # Load environment variables from .env file
+    load_dotenv()
     
     # load the document
     documents = SimpleDirectoryReader(input_files=["context.txt"]).load_data()
+    
+    # prepare Falcon Huggingface API
+    llm = HuggingFaceEndpoint(
+                endpoint_url= "https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct" ,
+                huggingfacehub_api_token=os.environ["HUGGINGFACE_API_KEY"],
+                task="text-generation",
+                model_kwargs = {
+                    "max_new_tokens":200 # define the maximum number of tokens the model may produce in its answer         
+                }
+            )
+
+    # LLMPredictor: to generate the text response (Completion)
+    llm_predictor = LLMPredictor(llm=llm)
+
+    # LangchainEmbedding: to convert text to embedding vector	
+    # Hugging Face models can be supported by using LangchainEmbedding					  
+    embed_model = LangchainEmbedding(HuggingFaceEmbeddings())
+
+    # ServiceContext: to encapsulate the resources used to create indexes and run queries
+    service_context = ServiceContext.from_defaults(
+            llm_predictor=llm_predictor, 
+            embed_model=embed_model
+        )
     
     # build index
     index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
