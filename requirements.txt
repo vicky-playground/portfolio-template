@@ -8,3 +8,4 @@ llama-cpp-python==0.1.9
 nltk==3.8.1
 sentence_transformers
 langchain
+python-dotenv
