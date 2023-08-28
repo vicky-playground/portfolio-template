@@ -1,6 +1,6 @@
 info = {
    "name":"Vicky Kuo",
-   "Brief":"A business-focused data enthusiast relentlessly challenging the status quo",
+      "About1":"Lorem ipsum dolor sit amet, eu quo liber nonumes vivendum, at hinc neglegentur conclusionemque per, ut eruditi appareat insolens vis. Tractatos explicari pri in, in option platonem imperdiet eum. Nec dolores nominavi voluptatum ex, id diam inciderint vim, cu dolorem fierent pro. No quem nibh appetere duo. Mollis eripuit vel in, et vis modus scriptorem efficiantur.",
    "Email":"vicky.kuo.contact@gmail.com",
    "Tableau":"https://public.tableau.com/app/profile/vickytc/viz/SunnybrookTeam/Overview",
    "Medium":"https://medium.com/@vicky-note/about",
