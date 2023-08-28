@@ -36,19 +36,26 @@ aws_lottie = load_lottieurl("https://lottie.host/6eae8bdc-74d1-4b5d-9eb7-3766227
 
 
 # ----------------- info ----------------- #
-with st.container():
-    col1,col2 = st.columns(2)
-    
-    def gradient(color1, color2, color3, content):
-     st.markdown(f'<h1 style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});color:{color3};font-size:60px;border-radius:2%;">{content}</h1>', unsafe_allow_html=True)
+def gradient(color1, color2, color3, content1, content2):
+    st.markdown(f'<h1 style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});font-size:60px;border-radius:2%;">'
+                f'<span style="color:{color3};">{content1}</span><br>'
+                f'<span style="color:white;font-size:17px;">{content2}</span></h1>', 
+                unsafe_allow_html=True)
 
-    with col1:
-        gradient('#FFD4DD','#000395','e0fbfc',"I'm' Vicky")
-        st.markdown("""<p style="color:#FFD4DD; font-size:20px; text-align: center;">🔥 Passion for improving product and CX by data! 🔥</p>""", unsafe_allow_html=True)
-        st.write(info['Brief'])
+with st.container():
+    col1,col2 = st.columns([8,3])
+
+
+with col1:
+    gradient('#FFD4DD','#000395','e0fbfc',"Hi, I'm Vicky👋", "A business-focused data enthusiast relentlessly challenging the status quo")
+    st.write("")
+    st.write(info['About1'])
+    
+with col2:
+    st_lottie(lottie_gif, height=280, key="data")
         
-    with col2:
-        st_lottie(lottie_gif, height=300, key="data")
+with st.container():
+    st.write(info['About2'])
 
 # ----------------- skillset ----------------- #
 with st.container():
