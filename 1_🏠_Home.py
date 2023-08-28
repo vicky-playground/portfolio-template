@@ -15,7 +15,7 @@ st.set_page_config(page_title='Vicky Kuo' ,layout="wide",page_icon='👧🏻')
 
 with st.container():
     # load the document
-    documents = SimpleDirectoryReader(input_files=["catalog.txt"]).load_data()
+    documents = SimpleDirectoryReader(input_files=["context.txt"]).load_data()
     
     # prepare Falcon Huggingface API
     llm = HuggingFaceEndpoint(
