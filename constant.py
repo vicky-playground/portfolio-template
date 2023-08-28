@@ -1,18 +1,11 @@
 info = {
    "name":"Vicky Kuo",
-   "Brief":"Data scientist with 4+ years of experience. Keen on solving business problems using data and AI. Proven success in managing multi-million dollar projects, driving profitability, and increasing customer retention.",
+   "Brief":"A business-focused data enthusiast relentlessly challenging the status quo",
    "Email":"vicky.kuo.contact@gmail.com",
    "Tableau":"https://public.tableau.com/app/profile/vickytc/viz/SunnybrookTeam/Overview",
    "Medium":"https://medium.com/@vicky-note/about",
    "City":"Toronto, Canada",
-   "Photo":"""<a href=\"https://www.linkedin.com/\"><img src=\"https://user-images.githubusercontent.com/90204593/238972749-344aaaaf-18de-4759-86c8-0eb92e4cac30.png" width=\"100\" height=\"100\"  alt=\"Profile\" title=\"Profile\"></a>""",
-   "skills":[
-      "Data Science",
-      "RDBMS",
-      "Python",
-      "Data Viz",
-      "Product Management"
-   ]
+   "Photo":"""<a href=\"https://www.linkedin.com/in/vicky-tck/\"><img src=\"https://user-images.githubusercontent.com/90204593/238972749-344aaaaf-18de-4759-86c8-0eb92e4cac30.png" width=\"100\" height=\"100\"  alt=\"Profile\" title=\"Profile\"></a>"""
 }
 
 skill_col_size = 5
@@ -29,5 +22,5 @@ embed_rss= {
 }
 
 foot = {
-    "url":"https://author.skills.network/instructors/vicky_kuo"
+    "url":"https://www.linkedin.com/in/vicky-tck/"
 }
