@@ -29,7 +29,6 @@ with st.container():
                 huggingfacehub_api_token=os.environ["HUGGINGFACE_API_KEY"],
                 task="text-generation",
                 model_kwargs = {
-                    "temperature":0, # a temperature of 0 makes the model deterministic. It limits the model to use the word with the highest probability. Default temperature:0.8
                     "max_new_tokens":200 # define the maximum number of tokens the model may produce in its answer         
                 }
             )
