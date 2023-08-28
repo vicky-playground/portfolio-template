@@ -49,13 +49,11 @@ with st.container():
 with col1:
     gradient('#FFD4DD','#000395','e0fbfc',"Hi, I'm Vicky👋", "A business-focused data enthusiast relentlessly challenging the status quo")
     st.write("")
-    st.write(info['About1'])
+    st.write(info['About'])
     
 with col2:
     st_lottie(lottie_gif, height=280, key="data")
         
-with st.container():
-    st.write(info['About2'])
 
 # ----------------- skillset ----------------- #
 with st.container():
