@@ -86,11 +86,12 @@ with st.container():
     
     # get the user's input by calling the get_text function
     def get_text():
-        input_text = st.text_input("I'm eager to hear about potential career opportunities, so I'd be pleased to chat about job openings in the tech sphere. You can send your questions and hit Enter to know more about me after providing OpenAI API Key on the sidebar:)", key="input")
+        input_text = st.text_input("You can ask me about this website:)", key="input")
         return input_text
     
     user_input = get_text()
-    st.info(ask_bot(user_input))
+    if user_input:
+        st.info(ask_bot(user_input))
 
 # -----------------  loading assets  ----------------- #
 st.sidebar.markdown(info['Photo'],unsafe_allow_html=True)
