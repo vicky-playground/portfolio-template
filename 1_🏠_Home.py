@@ -22,7 +22,7 @@ conversation_history = []
 
 def ask_bot(input_text):
     # load the file
-    documents = SimpleDirectoryReader('data').load_data()
+    documents = SimpleDirectoryReader(input_files=["data.txt"]).load_data()
     
     # define LLM
     llm = ChatOpenAI(
