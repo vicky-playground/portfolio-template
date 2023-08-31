@@ -6,6 +6,3 @@ streamlit_timeline==0.0.2
 llama-index>=0.8.5
 llama-cpp-python==0.1.9
 nltk==3.8.1
-sentence_transformers
-langchain
-python-dotenv
