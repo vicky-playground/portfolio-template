@@ -1,3 +1,14 @@
-Building a Portfolio Website with Streamlit and Hugging Face's Open-Source LLM Model: Combine the power of Streamlit's user-friendly interface with the robust capabilities of Hugging Face's open-source model to create your very own portfolio website. The best part? You don't need to be a tech expert to get started! For the foundation of our portfolio, we utilize the tiiuae/falcon-7b-instruct model. This model is both efficient and powerful, requiring only about ~15GB. This makes it feasible even for consumer hardware. When compared to other open-source models such as MPT-7B, StableLM, and RedPajama, it emerges as a standout performer. Its design, having been trained on conversational data, also makes it ideal for crafting chat applications.
+This tutorial is to guide you to build your very own Portfolio Website with the help of Streamlit and OpenAI's GPT-3 text-davinci-003 model. The best part? You don't need to be a tech whiz to get started. We're talking about combining the super-friendly interface of Streamlit with the serious firepower of OpenAI to showcase your work. 
 
-Why opt for this tutorial: While there's an abundance of tutorials on crafting Streamlit apps, there's a scarcity of resources dedicated to building a personal portfolio website with it. I've created this step-by-step guide to fill that void. Dive in and discover how to harness the potential of Streamlit for your professional showcase! 💼 I hope you find this guide invaluable.
+So, why should you even consider this tutorial? Sure, there are plenty of guides out there for creating Streamlit apps, but there's a noticeable gap when it comes to using it for crafting personal portfolio websites. That's where I come in with this step-by-step guide to fill that void. 
+
+Why Choose Streamlit for Your Portfolio Website?
+- Fast, straightforward, and free website development to showcase beautiful machine learning and data science projects – perfect for data scientists!
+- If you're familiar with *Python*, you're all set! 👍
+- Hone your Python skills while achieving tangible outcomes!
+- Create impressive web apps with minimal code!
+- Deploying your app is hassle-free and cost-effective.
+
+
+
+
