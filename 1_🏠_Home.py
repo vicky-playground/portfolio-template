@@ -3,7 +3,7 @@ import requests
 from streamlit_lottie import st_lottie
 from streamlit_timeline import timeline
 import streamlit.components.v1 as components
-from llama_index import StorageContext, load_index_from_storage, LLMPredictor, ServiceContext
+from llama_index import SimpleDirectoryReader, LLMPredictor, ServiceContext
 from constant import *
 from PIL import Image
 import openai
