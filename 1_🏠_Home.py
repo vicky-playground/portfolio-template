@@ -3,95 +3,78 @@ import requests
 from streamlit_lottie import st_lottie
 from streamlit_timeline import timeline
 import streamlit.components.v1 as components
-from constant import *	
-from llama_index import SimpleDirectoryReader
-from langchain.embeddings.huggingface import HuggingFaceEmbeddings
-from langchain import HuggingFaceHub
-from langchain.llms import HuggingFaceEndpoint
-from llama_index import GPTVectorStoreIndex
-from llama_index import LLMPredictor, ServiceContext, LangchainEmbedding
-import os
-from dotenv import load_dotenv
+from llama_index import StorageContext, load_index_from_storage, LLMPredictor, ServiceContext
+from constant import *
+from PIL import Image
+import openai
+from langchain.chat_models import ChatOpenAI
 
-st.set_page_config(page_title='Vicky Kuo' ,layout="wide",page_icon='👧🏻')
+st.set_page_config(page_title='Template' ,layout="wide",page_icon='👧🏻')
 
-with st.container():
-    
-    # Load environment variables from .env file
-    load_dotenv()
-    
-    # load the document
-    documents = SimpleDirectoryReader(input_files=["context.txt"]).load_data()
-    
-    # prepare Falcon Huggingface API
-    llm = HuggingFaceEndpoint(
-                endpoint_url= "https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct" ,
-                huggingfacehub_api_token=os.environ["HUGGINGFACE_API_KEY"],
-                task="text-generation",
-                model_kwargs = {
-                    "max_new_tokens":200 # define the maximum number of tokens the model may produce in its answer         
-                }
-            )
+# -----------------  chatbot  ----------------- #
+openai_api_key = st.sidebar.text_input('Enter your OpenAI API Key and hit Enter', type="password")
+openai.api_key = (openai_api_key)
 
-    # LLMPredictor: to generate the text response (Completion)
+
+
+#Storing the conversation history in a List
+conversation_history = []
+
+def ask_bot(input_text):
+    # define LLM
+    llm = ChatOpenAI(
+        model_name="gpt-3.5-turbo",
+        temperature=0,
+        openai_api_key=openai.api_key,
+    )
+
     llm_predictor = LLMPredictor(llm=llm)
+    service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
 
-    # LangchainEmbedding: to convert text to embedding vector	
-    # Hugging Face models can be supported by using LangchainEmbedding					  
-    embed_model = LangchainEmbedding(HuggingFaceEmbeddings())
+    # rebuild storage context
+    storage_context = StorageContext.from_defaults(persist_dir="./storage")
+    # load index
+    index = load_index_from_storage(storage_context, service_context=service_context)
 
-    # ServiceContext: to encapsulate the resources used to create indexes and run queries
-    service_context = ServiceContext.from_defaults(
-            llm_predictor=llm_predictor, 
-            embed_model=embed_model
-        )
-    
-    # build index
-    index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
-    
-    # use a query engine as the interface for your question
-    query_engine = index.as_query_engine(service_context=service_context)
-    
-    # Store the conversation history in a List
-    conversation_history = []
-    
-    def ask_bot(input_text):
-    
-        PROMPT_QUESTION = """
-            Your name is Portfolio Website Template, helping learners in building an AI chatbot portfolio website using Streamlit and the free LLM model.
-            Your conversation with the human is recorded in the chat history below.
-    
-            History:
-            "{history}"
-    
-            Now continue the conversation with the human. If you do not know the answer based on the chat history and the new input from the client, politely admit it and therefore you need more information.
-            Human: {input}
-            You:"""
-    
-        # update conversation history
-        global conversation_history
-        history_string = "\n".join(conversation_history)
-        print(f"history_string: {history_string}")
+    PROMPT_QUESTION = """
+        You are the website assistant helping users to get answers regarding this website.
         
-        # query LlamaIndex and the LLM for the AI's response
-        output = query_engine.query(PROMPT_QUESTION.format(history=history_string, input=input_text))
-        print(f"output: {output}")
+        History:
+        "{history}"
         
-        # update conversation history with user input and AI's response
-        conversation_history.append(input_text)
-        conversation_history.append(output.response)
-        
+        Now continue the conversation with the human. If you do not know the answer, politely ask for more information.
+        Human: {input}
+        Assistant:"""
+
+    # update conversation history
+    global conversation_history
+    history_string = "\n".join(conversation_history)
+    print(f"history_string: {history_string}")
     
-        return output.response
+    # query LlamaIndex and GPT-3.5 for the AI's response
+    output = index.as_query_engine().query(PROMPT_QUESTION.format(history=history_string, input=input_text))
+    print(f"output: {output}")
     
-    # get the user's input by calling the get_text function
-    def get_text():
-        input_text = st.text_input("You can ask me about this website:)", key="input")
-        return input_text
+    # update conversation history with user input and AI's response
+    conversation_history.append(input_text)
+    conversation_history.append(output.response)
     
-    user_input = get_text()
-    if user_input:
-        st.info(ask_bot(user_input))
+    return output.response
+
+# get the user's input by calling the get_text function
+def get_text():
+    input_text = st.text_input("I'm eager to hear about potential career opportunities, so I'd be pleased to chat about job openings in the tech sphere. You can send your questions and hit Enter to know more about me after providing OpenAI API Key on the sidebar:)", key="input")
+    return input_text
+
+#st.markdown("Chat With Me Now")
+user_input = get_text()
+
+if user_input:
+  #text = st.text_area('Enter your questions')
+  if not openai_api_key.startswith('sk-'):
+    st.warning('⚠️Please enter your OpenAI API key on the sidebar.', icon='⚠')
+  if openai_api_key.startswith('sk-'):
+    st.info(ask_bot(user_input))
 
 # -----------------  loading assets  ----------------- #
 st.sidebar.markdown(info['Photo'],unsafe_allow_html=True)
