@@ -6,8 +6,6 @@ info = {
    "Photo":"""<a href=\"https://www.linkedin.com/\"><img src=\"https://user-images.githubusercontent.com/90204593/238972749-344aaaaf-18de-4759-86c8-0eb92e4cac30.png" width=\"100\" height=\"100\"  alt=\"Profile\" title=\"Profile\"></a>"""
 }
 
-skill_col_size = 5
-
 embed_rss= {
     'rss':"""<div style="overflow-y: scroll; height:500px; background-color:white;"> <div id="retainable-rss-embed" 
         data-rss="https://medium.com/feed/@vicky-note"
