@@ -21,20 +21,20 @@ openai.api_key = (openai_api_key)
 conversation_history = []
 
 def ask_bot(input_text):
+    # load the file
+    documents = SimpleDirectoryReader('data').load_data()
+    
     # define LLM
     llm = ChatOpenAI(
         model_name="gpt-3.5-turbo",
         temperature=0,
         openai_api_key=openai.api_key,
     )
-
     llm_predictor = LLMPredictor(llm=llm)
     service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
-
-    # rebuild storage context
-    storage_context = StorageContext.from_defaults(persist_dir="./storage")
+    
     # load index
-    index = load_index_from_storage(storage_context, service_context=service_context)
+    index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
 
     PROMPT_QUESTION = """
         You are the website assistant helping users to get answers regarding this website.
