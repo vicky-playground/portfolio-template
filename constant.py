@@ -1,11 +1,9 @@
 info = {
-   "name":"Vicky Kuo",
    "About":"Lorem ipsum dolor sit amet, eu quo liber nonumes vivendum, at hinc neglegentur conclusionemque per, ut eruditi appareat insolens vis. Tractatos explicari pri in, in option platonem imperdiet eum. Nec dolores nominavi voluptatum ex, id diam inciderint vim, cu dolorem fierent pro. No quem nibh appetere duo. Mollis eripuit vel in, et vis modus scriptorem efficiantur.",
-   "Email":"vicky.kuo.contact@gmail.com",
    "Tableau":"https://public.tableau.com/app/profile/vickytc/viz/SunnybrookTeam/Overview",
    "Medium":"https://medium.com/@vicky-note/about",
    "City":"Toronto, Canada",
-   "Photo":"""<a href=\"https://www.linkedin.com/in/vicky-tck/\"><img src=\"https://user-images.githubusercontent.com/90204593/238972749-344aaaaf-18de-4759-86c8-0eb92e4cac30.png" width=\"100\" height=\"100\"  alt=\"Profile\" title=\"Profile\"></a>"""
+   "Photo":"""<a href=\"https://www.linkedin.com/\"><img src=\"https://user-images.githubusercontent.com/90204593/238972749-344aaaaf-18de-4759-86c8-0eb92e4cac30.png" width=\"100\" height=\"100\"  alt=\"Profile\" title=\"Profile\"></a>"""
 }
 
 skill_col_size = 5
