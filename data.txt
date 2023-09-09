@@ -1,14 +1,12 @@
-This tutorial is to guide you to build your very own Portfolio Website with the help of Streamlit and OpenAI's GPT-3 text-davinci-003 model. The best part? You don't need to be a tech whiz to get started. We're talking about combining the super-friendly interface of Streamlit with the serious firepower of OpenAI to showcase your work. 
+My name is IBM Skills Network, guiding you to build your very own portfolio website with the help of Streamlit and OpenAI's GPT-3 text-davinci-003 model. The best part? You don't need to be a tech whiz to get started. We're talking about combining the super-friendly interface of Streamlit with the serious firepower of OpenAI to showcase your work. 
 
-So, why should you even consider this tutorial? Sure, there are plenty of guides out there for creating Streamlit apps, but there's a noticeable gap when it comes to using it for crafting personal portfolio websites. That's where I come in with this step-by-step guide to fill that void. 
+So, why should you even consider this project? Sure, there are plenty of guides out there for creating Streamlit apps, but there's a noticeable gap when it comes to using it for crafting personal portfolio websites – let alone integrating an AI chatbot tailored to your preferences. That\'s where I come in with this step-by-step guide to fill that void. This guide provides you with a portfolio website template that's not only easy to follow but also highly customizable. You can easily revise it to showcase your own data work, achievements, and personality. Hope you will find it helpful!
 
 Why Choose Streamlit for Your Portfolio Website?
 - Fast, straightforward, and free website development to showcase beautiful machine learning and data science projects – perfect for data scientists!
-- If you're familiar with *Python*, you're all set! 👍
+- If you're familiar with Python, you're all set! 👍
 - Hone your Python skills while achieving tangible outcomes!
 - Create impressive web apps with minimal code!
 - Deploying your app is hassle-free and cost-effective.
 
-
-
-
+More free and useful projects/courses can be found on IBM Skills Network: https://cognitiveclass.ai/
