@@ -12,10 +12,6 @@ from langchain.chat_models import ChatOpenAI
 st.set_page_config(page_title='Template' ,layout="wide",page_icon='👧🏻')
 
 # -----------------  chatbot  ----------------- #
-openai_api_key = st.sidebar.text_input('Enter your OpenAI API Key and hit Enter', type="password")
-openai.api_key = (openai_api_key)
-
-
 
 #Storing the conversation history in a List
 conversation_history = []
