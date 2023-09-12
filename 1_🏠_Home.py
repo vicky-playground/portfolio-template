@@ -99,7 +99,7 @@ git_lottie = load_lottieurl("https://assets9.lottiefiles.com/private_files/lf30_
 github_lottie = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_6HFXXE.json")
 docker_lottie = load_lottieurl("https://assets4.lottiefiles.com/private_files/lf30_35uv2spq.json")
 figma_lottie = load_lottieurl("https://lottie.host/5b6292ef-a82f-4367-a66a-2f130beb5ee8/03Xm3bsVnM.json")
-aws_lottie = load_lottieurl("https://lottie.host/6eae8bdc-74d1-4b5d-9eb7-37662274cd19/Nduizk8IOf.json")
+js_lottie = load_lottieurl("https://lottie.host/?file=fc1ad1cd-012a-4da2-8a11-0f00da670fb9/GqPujskDlr.json")
 
 
 
