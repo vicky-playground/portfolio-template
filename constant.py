@@ -3,7 +3,7 @@ info = {
    "Tableau":"https://public.tableau.com/app/profile/vickytc/viz/SunnybrookTeam/Overview",
    "Medium":"https://medium.com/@vicky-note/about",
    "City":"Toronto, Canada",
-   "Photo":"""<a href=\"https://cognitiveclass.ai/\"><img src=\"https://sn-portals-cognitiveclass.s3.us-south.cloud-object-storage.appdomain.cloud/lmzotycs3p11f936gx1u5drchdrk" width=\"100\" height=\"100\"   alt=\"Profile\" title=\"Profile\"></a>"""
+   "Photo":"""<a href=\"https://cognitiveclass.ai/\"><img src=\"https://sn-portals-cognitiveclass.s3.us-south.cloud-object-storage.appdomain.cloud/lmzotycs3p11f936gx1u5drchdrk" width=\"100\" height=\"200\"   alt=\"Profile\" title=\"Profile\"></a>"""
 }
 
 embed_rss= {
