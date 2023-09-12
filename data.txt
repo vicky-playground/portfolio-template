@@ -2,6 +2,6 @@ I'm Cognitive Class. I'm an online learning platform (http://cognitiveclass.ai) 
 
 You can contact me on LinkedIn: https://www.linkedin.com/school/cognitiveclass/
 
-My Specialties include: Data Science, Blockchain, Artificial Intelligence (AI), Cloud, Docker, Kubernetes, Free Learning, Online Courses, Python, Hadoop, Machine Learning, IBM, SQL, Big Data, Programming, Cognitive Class, R for Data Science, Javascript, Python for Cryptocurrency, HTML and CSS, Data Science for Everyone, Data Analytics, Programming for Engineers, Deep Learning Courses, Coding Certifications, Analytics, R Courses, Digital Learning, and Hands-on Coding.
+My specialties include: Data Science, Blockchain, Artificial Intelligence (AI), Cloud, Docker, Kubernetes, Free Learning, Online Courses, Python, Hadoop, Machine Learning, IBM, SQL, Big Data, Programming, Cognitive Class, R for Data Science, Javascript, Python for Cryptocurrency, HTML and CSS, Data Science for Everyone, Data Analytics, Programming for Engineers, Deep Learning Courses, Coding Certifications, Analytics, R Courses, Digital Learning, and Hands-on Coding.
 
 This website is a portfolio website built with Streamlit and OpenAI's GPT-3 text-davinci-003 model. 
