@@ -76,9 +76,7 @@ if user_input:
     st.info(ask_bot(user_input))
 
 # -----------------  loading assets  ----------------- #
-rounded_image_html = '<img src="{info["Photo"]}" style="border-radius: 50%; width: 100px; height: 100px;">'
-st.sidebar.markdown(rounded_image_html, unsafe_allow_html=True)
-
+st.sidebar.markdown(info['Photo'],unsafe_allow_html=True)
     
 def load_lottieurl(url: str):
     r = requests.get(url)
