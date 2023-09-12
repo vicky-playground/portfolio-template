@@ -1,7 +1,7 @@
 info = {
    "About":"I'm an online learning platform offering a range of courses and resources to help you become data and AI-ready. Register today to gain the skills you need to change the world. Proudly an IBM initiative.",
    "Tableau":"https://public.tableau.com/app/profile/vickytc/viz/SunnybrookTeam/Overview",
-   "Medium":"https://medium.com/@vicky-note/about",
+   "Medium":"https://medium.com/the-power-of-ai/about",
    "City":"Toronto, Canada",
    "Photo":"""<a href=\"https://cognitiveclass.ai/\"><img src=\"https://sn-portals-cognitiveclass.s3.us-south.cloud-object-storage.appdomain.cloud/lmzotycs3p11f936gx1u5drchdrk" width=\"200\"   alt=\"Profile\" title=\"Profile\"></a>"""
 }
