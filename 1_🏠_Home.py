@@ -115,7 +115,7 @@ with st.container():
 
 
 with col1:
-    gradient('#FFD4DD','#000395','e0fbfc',"Hi, I'm TEMPLATE👋", "Lorem ipsum dolor sit amet, eu quo liber nonumes vivendum")
+    gradient('#FFD4DD','#000395','e0fbfc',"Hi, I'm Cognitive Class👋", "I'm an online learning platform (http://cognitiveclass.ai) offering a range of courses and resources to help you become data and AI-ready. Register today to gain the skills you need to change the world. Proudly an IBM initiative.")
     st.write("")
     st.write(info['About'])
     
