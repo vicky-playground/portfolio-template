@@ -142,7 +142,7 @@ with st.container():
     with col3:
         st_lottie(figma_lottie,height=50,width=50, key="figma", speed=2.5)
     with col4:
-        st_lottie(js_lottie,height=50,width=50, key="aws", speed=2.5)
+        st_lottie(js_lottie,height=50,width=50, key="js", speed=2.5)
     
     
 # ----------------- timeline ----------------- #
