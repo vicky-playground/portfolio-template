@@ -1,5 +1,5 @@
 info = {
-   "About":"I'm an online learning platform (http://cognitiveclass.ai) offering a range of courses and resources to help you become data and AI-ready. Register today to gain the skills you need to change the world. Proudly an IBM initiative.",
+   "About":"I'm an online learning platform offering a range of courses and resources to help you become data and AI-ready. Register today to gain the skills you need to change the world. Proudly an IBM initiative.",
    "Tableau":"https://public.tableau.com/app/profile/vickytc/viz/SunnybrookTeam/Overview",
    "Medium":"https://medium.com/@vicky-note/about",
    "City":"Toronto, Canada",
