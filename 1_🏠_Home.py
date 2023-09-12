@@ -36,7 +36,7 @@ def ask_bot(input_text):
     index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
 
     PROMPT_QUESTION = """
-        You are the website assistant helping users to get answers regarding this website.
+        You are the website assistant representing IBM Skills Network, helping users to get answers regarding this website.
         
         History:
         "{history}"
