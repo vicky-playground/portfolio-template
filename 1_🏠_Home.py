@@ -16,7 +16,7 @@ openai_api_key = st.sidebar.text_input('Enter your OpenAI API Key and hit Enter'
 openai.api_key = (openai_api_key)
 
 
-#Storing the conversation history in a List
+# store the conversation history in a List
 conversation_history = []
 
 def ask_bot(input_text):
