@@ -15,49 +15,26 @@ st.set_page_config(page_title='Template' ,layout="wide",page_icon='👧🏻')
 openai_api_key = st.sidebar.text_input('Enter your OpenAI API Key and hit Enter', type="password")
 openai.api_key = (openai_api_key)
 
+# load the file
+documents = SimpleDirectoryReader(input_files=["data.txt"]).load_data()
 
-# store the conversation history in a List
-conversation_history = []
+# define LLM
+llm = ChatOpenAI(
+    model_name="gpt-3.5-turbo",
+    temperature=0,
+    openai_api_key=openai.api_key,
+)
+llm_predictor = LLMPredictor(llm=llm)
+service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
+
+# load index
+index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
 
 def ask_bot(input_text):
-    # load the file
-    documents = SimpleDirectoryReader(input_files=["data.txt"]).load_data()
-    
-    # define LLM
-    llm = ChatOpenAI(
-        model_name="gpt-3.5-turbo",
-        temperature=0,
-        openai_api_key=openai.api_key,
-    )
-    llm_predictor = LLMPredictor(llm=llm)
-    service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
-    
-    # load index
-    index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
-
-    PROMPT_QUESTION = """
-        Your name is IBM Skills Network, helping users to get answers about you.
-        
-        History:
-        "{history}"
-        
-        Now continue the conversation with the human. If you do not know the answer, politely ask for more information.
-        Human: {input}
-        Assistant:"""
-
-    # update conversation history
-    global conversation_history
-    history_string = "\n".join(conversation_history)
-    print(f"history_string: {history_string}")
-    
+    global index    
     # query LlamaIndex and GPT-3.5 for the AI's response
-    output = index.as_query_engine().query(PROMPT_QUESTION.format(history=history_string, input=input_text))
+    output = index.as_query_engine().query(input_text)
     print(f"output: {output}")
-    
-    # update conversation history with user input and AI's response
-    conversation_history.append(input_text)
-    conversation_history.append(output.response)
-    
     return output.response
 
 # get the user's input by calling the get_text function
