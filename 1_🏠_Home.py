@@ -18,20 +18,19 @@ openai.api_key = (openai_api_key)
 # load the file
 documents = SimpleDirectoryReader(input_files=["data.txt"]).load_data()
 
-# define LLM
-llm = ChatOpenAI(
-    model_name="gpt-3.5-turbo",
-    temperature=0,
-    openai_api_key=openai.api_key,
-)
-llm_predictor = LLMPredictor(llm=llm)
-service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
-
-# load index
-index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
-
 def ask_bot(input_text):
-    global index    
+    # define LLM
+    llm = ChatOpenAI(
+        model_name="gpt-3.5-turbo",
+        temperature=0,
+        openai_api_key=openai.api_key,
+    )
+    llm_predictor = LLMPredictor(llm=llm)
+    service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
+    
+    # load index
+    index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)    
+    
     # query LlamaIndex and GPT-3.5 for the AI's response
     output = index.as_query_engine().query(input_text)
     print(f"output: {output}")
