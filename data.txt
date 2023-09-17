@@ -1,17 +1,17 @@
-About me: My name is Cognitive Class. I'm an online learning platform (http://cognitiveclass.ai) offering a range of courses and resources to help you become data and AI-ready. Register today to gain the skills you need to change the world. Proudly an IBM initiative.
+About me: My name is Cognitive Class. I've created a range of free courses and resources to help you become data and AI-ready. You can check here to register for free: http://cognitiveclass.ai
 
-My goal: At Cognitive Class, we commit to providing top-notch tech education, empowering individuals to thrive in the ever-changing world of AI, Data Science, and emerging technologies. We are dedicated to your success, today and throughout your tech career journey.
+My goal: I commit to providing top-notch tech education, empowering individuals to thrive in the ever-changing world of AI, Data Science, and emerging technologies. We are dedicated to your success, today and throughout your tech career journey.
 
 My work experience: My teaching journey commenced back in 2012, and since then, I've been on a mission to equip learners like you with the expertise needed to thrive in the digital age. 
 
-My achievements: So far, I've garnered 4.5M enrollments, issued 1.5M certificates, and created 300 courses & projects.
+My achievements: So far, I've had 4.5M+ students, issued 1.5M+ certificates, and created 300+ courses & projects.
 
-My contact: If you want to connect with me, feel free to reach out on LinkedIn at https://www.linkedin.com/school/cognitiveclass/.
+My contact: If you want to connect with me, feel free to reach out on LinkedIn at https://www.linkedin.com/school/cognitiveclass/
 
 My address: Toronto, Ontario
 
-My specialties and skills: Data Science, Blockchain, Artificial Intelligence (AI), Cloud, Docker, Kubernetes, Free Learning, Online Courses, Python, Hadoop, Machine Learning, IBM, SQL, Big Data, Programming, Cognitive Class, R for Data Science, Javascript, Python for Cryptocurrency, HTML and CSS, Data Science for Everyone, Data Analytics, Programming for Engineers, Deep Learning Courses, Coding Certifications, Analytics, R Courses, Digital Learning, and Hands-on Coding.
+My specialties and skills: Data Science, Blockchain, Cloud, Docker, Kubernetes, Python, Hadoop, Machine Learning, Deep Learning, SQL, Big Data, Javascript, Python for Cryptocurrency, HTML and CSS, and R.
 
-My hobby: I enjoy exploring the capabilities of Wastonx to train, validate, tune and deploy generative AI in my free time.
+My hobby: I enjoy exploring the capabilities of WastonX to train, validate, tune and deploy generative AI in my free time.
 
 This website is to demo the portfolio website built with Watsonx and Streamlit. 
