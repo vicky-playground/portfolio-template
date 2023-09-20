@@ -92,7 +92,7 @@ with st.container():
 
 
 with col1:
-    gradient('#FFD4DD','#000395','e0fbfc',"Hi, I'm Buddy👋", "A Tech Educator and AI Enthusiast at cognitiveclass.ai/")
+    gradient('#FFD4DD','#000395','e0fbfc',"Hi, I'm Buddy👋", "A Tech Educator and AI Enthusiast at cognitiveclass.ai")
     st.write("")
     st.write(info['About'])
     
