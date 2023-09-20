@@ -1,5 +1,5 @@
 info = {
-   "About":"I'm an online learning platform offering a range of courses and resources to help you become data and AI-ready. Register today to gain the skills you need to change the world. Proudly an IBM initiative.",
+   "About":"Hey there, I'm Buddy! I'm passionate about sharing my technical and data knowledge. My expertise covers a wide range of topics, from AI and Data Science to Blockchain, Cloud, and more. You can explore the wealth of free courses and resources I've created at cognitiveclass.ai.",
    "Tableau":"https://public.tableau.com/app/profile/vickytc/viz/SunnybrookTeam/Overview",
    "Medium":"https://medium.com/the-power-of-ai/about",
    "City":"Toronto, Canada",
