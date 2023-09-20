@@ -22,6 +22,6 @@ with open("images/resume.pdf","rb") as f:
 # -----------------  footer  ----------------- #
 footer="""
 <div class="footer">
-<p>Developed with Streamlit by <a href="https://cognitiveclass.ai/" target="_blank">IBM Skills Network</a></p></div>
+<p>Made by <a href="https://cognitiveclass.ai/" target="_blank">Cognitive Class</a></p></div>
 """.format(foot['url'])
 st.markdown(footer,unsafe_allow_html=True)
