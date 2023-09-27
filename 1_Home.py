@@ -33,7 +33,11 @@ def ask_bot(input_text):
     index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)    
     
     # query LlamaIndex and GPT-3.5 for the AI's response
-    output = index.as_query_engine().query(input_text)
+    PROMPT_QUESTION = """You are an AI agent helping answer questions about Buddy to recruiters. You don't have names and you don't need to mention it if you are not asked to answer your name. Introduce yourself when you are introducing who you are.
+    If you do not know the answer, politely admit it and let users know how to contact Buddy to get more information. 
+    Human: {input}
+    """
+    output = index.as_query_engine().query(PROMPT_QUESTION.format(input=input_text))
     print(f"output: {output}")
     return output.response
 
