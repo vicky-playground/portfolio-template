@@ -1,20 +1,41 @@
-About Me:
-Hey there, I'm Buddy! I'm passionate about sharing my knowledge. My expertise covers a wide range of topics, from AI and Data Science to Blockchain, Cloud, and more. You can explore the wealth of free courses and resources I've created at cognitiveclass.ai.
+About Buddy:
+Buddy is a seasoned professional with expertise in AI, Data Science, Blockchain, and Cloud technologies. Holding an undergraduate degree in Computer Science from the University of Techville (2010), Buddy is committed to delivering innovative solutions and offers valuable resources at cognitiveclass.ai.
 
-My Goal/ Purpose/ Mission:
-My mission is to make tech education accessible and engaging for everyone. Whether you're diving into AI or web development, I'm here to help you on your learning journey.
+Work Experience:
+Data Scientist at IBM (2015-2019); Software Developer at IBM (2010-2015)
 
-My Work Experience:
-I've been doing this tech teaching thing since 2012. I'm all about helping folks like you master the tech world. I've had the chance to guide more than 4.5 million students through their tech journeys and hand out over 1.5 million certificates along the way. Plus, I've cooked up a whopping 300+ courses and projects for learners to explore!
+Career Goal:
+Buddy's career goal is to leverage their expertise in AI and emerging technologies to drive meaningful innovation and create solutions that positively impact businesses and society.
 
-My Contact:
-If you want to connect, you can find me on LinkedIn at https://www.linkedin.com/school/cognitiveclass/.
+Skills: 
+AI, Data Science, Blockchain, Cloud, Python
 
-My Address:
-Toronto, Ontario.
+Certification:
+IBM Applied AI Professional Certificate (2023)
 
-My Hobby:
-Even in my downtime, I'm tech-obsessed. I spend my free hours diving into the world of GenAI, where I tinker with generative AI using IBM's top-notch tools. It's more than a hobby; it's a passion for pushing the limits of what's possible.
+Achievements:
+Spearheaded AI projects at IBM, resulting in a 30% increase in user engagement.
+Utilized IBM's watsonx service to help over 1000 companies from various domains automate their HR processes, from hiring to onboarding, contributing to a 100% positive feedback rate from companies.
 
-This Website:
-This website is to showcase some of the cool projects I've worked on. I built it using generative AI and Python, and my hope is that it inspires you with ideas on how to effortlessly blend generative AI into your own portfolio website. Feel free to explore and get creative!
+Contact:
+LinkedIn: https://www.linkedin.com/school/cognitiveclass/
+Phone: 123-456-789
+Location: Toronto, Ontario
+
+Strengths and Advantages:
+Buddy's strengths lie in a profound passion for technology, innovative problem-solving, and client-centric solutions.
+
+Weaknesses and Disadvantages:
+Buddy's unwavering pursuit of excellence may occasionally lead to in-depth analysis, but it ensures the delivery of high-quality services.
+
+Interests and Hobbies:
+Buddy's passion for technology extends into leisure hours, where they delve into the cutting-edge realm of GenAI, continuously pushing the boundaries of what can be achieved in various projects. In addition, Buddy finds joy in the simple pleasures of life, such as walking their dogs, swimming, and sharing coffee moments with friends and family.
+
+Portfolio:
+Explore Buddy's portfolio of innovative projects at cognitiveclass.ai, showcasing expertise and tailored solutions. This website also serves as a showcase for some of Buddy's remarkable projects. Constructed using generative AI and Python, the website aims to inspire visitors with innovative ideas on seamlessly integrating generative AI into their own portfolio websites. Feel free to explore and ignite your creativity!
+
+Availability:
+Buddy is actively seeking new opportunities and is ready to start immediately.
+
+References:
+References are available upon request.
