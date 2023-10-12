@@ -45,7 +45,7 @@ def ask_bot(input_text):
 
 # get the user's input by calling the get_text function
 def get_text():
-    input_text = st.text_input("After providing OpenAI API Key on the sidebar, you can send your questions and hit Enter to know more about me from my AI agent, Buddy!", key="input"):)", key="input")
+    input_text = st.text_input("After providing OpenAI API Key on the sidebar, you can send your questions and hit Enter to know more about me from my AI agent, Buddy!", key="input")
     return input_text
 
 #st.markdown("Chat With Me Now")
