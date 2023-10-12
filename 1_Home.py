@@ -178,16 +178,20 @@ with st.container():
 
 # -----------------  endorsement  ----------------- #
 with st.container():
+    # Divide the container into three columns
     col1,col2,col3 = st.columns([0.475, 0.475, 0.05])
-        
+    # In the first column (col1)        
     with col1:
+        # Add a subheader to introduce the coworker endorsement slideshow
         st.subheader("👄 Coworker Endorsements")
+        # Embed an HTML component to display the slideshow
         components.html(
         f"""
         <!DOCTYPE html>
         <html>
         <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Styles for the slideshow -->
         <style>
             * {{box-sizing: border-box;}}
             .mySlides {{display: none;}}
@@ -233,6 +237,7 @@ with st.container():
             </style>
         </head>
         <body>
+            <!-- Slideshow container -->
             <div class="slideshow-container">
                 <div class="mySlides fade">
                 <img src={endorsements["img1"]} style="width:100%">
@@ -248,7 +253,7 @@ with st.container():
 
             </div>
             <br>
-
+            <!-- Navigation dots -->
             <div style="text-align:center">
                 <span class="dot"></span> 
                 <span class="dot"></span> 
