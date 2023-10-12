@@ -19,6 +19,8 @@ openai.api_key = (openai_api_key)
 # load the file
 documents = SimpleDirectoryReader(input_files=["bio.txt"]).load_data()
 
+pronoun = info["Pronoun"]
+name = info["Name"]
 def ask_bot(input_text):
     # define LLM
     llm = ChatOpenAI(
