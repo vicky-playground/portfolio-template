@@ -298,13 +298,11 @@ with st.container():
 
             """,
                 height=270,
-    )
-        
+    )  
     with col2:
         st.subheader("📨 Contact Me")
-        email = info["Email"]
         contact_form = f"""
-        <form action="https://formsubmit.co/{email}" method="POST">
+        <form action="https://formsubmit.co/{info["Email"]}" method="POST">
             <input type="hidden" name="_captcha value="false">
             <input type="text" name="name" placeholder="Your name" required>
             <input type="email" name="email" placeholder="Your email" required>
