@@ -12,7 +12,7 @@ st.sidebar.markdown(info['Photo'],unsafe_allow_html=True)
 
 st.title("📝 Resume")
 
-st.write("[Click here if it's blocked by your browser](https://drive.google.com/file/d/1e_trgOgzwYIY6eMSvjmyjgqBcCOdueZ1/view?usp=sharing)")
+st.write("[Click here if it's blocked by your browser](https://drive.google.com/file/d/1yztCc5SYT4cZu02kO9WcWg8Kp9O06U0y/view?usp=sharing)")
 
 with open("images/resume.pdf","rb") as f:
       base64_pdf = base64.b64encode(f.read()).decode('utf-8')
