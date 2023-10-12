@@ -33,17 +33,19 @@ def ask_bot(input_text):
     index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)    
     
     # query LlamaIndex and GPT-3.5 for the AI's response
-    PROMPT_QUESTION = """You are an AI agent helping answer questions about Buddy to recruiters. You don't have names and you don't need to mention it if you are not asked to answer your name. Introduce yourself when you are introducing who you are.
-    If you do not know the answer, politely admit it and let users know how to contact Buddy to get more information. 
+    PROMPT_QUESTION = f"""You are Buddy, an AI assistant dedicated to assisting {name} in her job search by providing recruiters with relevant and concise information. 
+    If you do not know the answer, politely admit it and let recruiters know how to contact {name} to get more information directly from {pronoun}. 
+    Don't put "Buddy" or a breakline in the front of your answer.
     Human: {input}
     """
+    
     output = index.as_query_engine().query(PROMPT_QUESTION.format(input=input_text))
     print(f"output: {output}")
     return output.response
 
 # get the user's input by calling the get_text function
 def get_text():
-    input_text = st.text_input("After providing OpenAI API Key on the sidebar, you can send your questions and hit Enter to know more about me from my AI agent:)", key="input")
+    input_text = st.text_input("After providing OpenAI API Key on the sidebar, you can send your questions and hit Enter to know more about me from my AI agent, Buddy!", key="input"):)", key="input")
     return input_text
 
 #st.markdown("Chat With Me Now")
@@ -94,11 +96,12 @@ def gradient(color1, color2, color3, content1, content2):
 with st.container():
     col1,col2 = st.columns([8,3])
 
-
+full_name = info['Full_Name']
 with col1:
-    gradient('#FFD4DD','#000395','e0fbfc',"Hi, I'm Buddy👋", "A Tech Educator and AI Enthusiast at cognitiveclass.ai")
+    gradient('#FFD4DD','#000395','e0fbfc',f"Hi, I'm {full_name}👋", info["Intro"])
     st.write("")
     st.write(info['About'])
+    
     
 with col2:
     st_lottie(lottie_gif, height=280, key="data")
@@ -295,12 +298,12 @@ with st.container():
             """,
                 height=270,
     )
-    with col2:
-        st.write("---")
-        st.subheader("📨 Get in touch with me!")
         
-        contact_form = """
-        <form action="https://formsubmit.co/email@gmail.com" method="POST">
+    with col2:
+        st.subheader("📨 Contact Me")
+        email = info["Email"]
+        contact_form = f"""
+        <form action="https://formsubmit.co/{email}" method="POST">
             <input type="hidden" name="_captcha value="false">
             <input type="text" name="name" placeholder="Your name" required>
             <input type="email" name="email" placeholder="Your email" required>
@@ -309,10 +312,3 @@ with st.container():
         </form>
         """
         st.markdown(contact_form, unsafe_allow_html=True)
-        
-# -----------------  footer  ----------------- #
-footer="""
-<div class="footer">
-<p>Made by <a href="https://cognitiveclass.ai/" target="_blank">Cognitive Class</a></p></div>
-"""
-st.markdown(footer,unsafe_allow_html=True)
