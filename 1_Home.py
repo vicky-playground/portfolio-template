@@ -176,7 +176,7 @@ with st.container():
             
         st.markdown(""" <a href={}> <em>🔗 access to the link </a>""".format(info['Medium']), unsafe_allow_html=True)
 
-# -----------------  contact  ----------------- #
+# -----------------  endorsement  ----------------- #
 with st.container():
     col1,col2,col3 = st.columns([0.475, 0.475, 0.05])
         
@@ -299,6 +299,8 @@ with st.container():
             """,
                 height=270,
     )  
+
+# -----------------  contact  ----------------- #
     with col2:
         st.subheader("📨 Contact Me")
         contact_form = f"""
