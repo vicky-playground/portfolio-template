@@ -1,7 +1,8 @@
 # Land your dream job: Build your portfolio with Streamlit
 Showcase your coding skills to recruiters with a chatbot tailored to your resume.
 
-[Demo](https://portfolio-template.streamlit.app/?ref=blog.streamlit.io):
+❄️[Demo](https://portfolio-template.streamlit.app/?ref=blog.streamlit.io): 
+
 ![ezgif com-video-to-gif (1)](https://github.com/vicky-playground/portfolio-template/assets/90204593/c60f52a9-7026-43ae-a7f3-89cacc730b2d)
 
 🤖 Feel free to engage with the chatbot here! Here are some sample questions to get you started:
