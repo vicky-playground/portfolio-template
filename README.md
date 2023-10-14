@@ -1,5 +1,5 @@
 # Land your dream job: Build your portfolio with Streamlit
-Dive into a straightforward portfolio website, crafted meticulously with Streamlit. Experience it live and interact with the friendly chatbot right here!
+Showcase your coding skills to recruiters with a chatbot tailored to your resume.
 
 🤖 Feel free to engage with the chatbot! Here are some sample questions to get you started:
 - hi
