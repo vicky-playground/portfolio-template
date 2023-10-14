@@ -168,7 +168,6 @@ with st.container():
 with st.container():
     st.markdown("""""")
     st.subheader('✍️ Medium')
-    page = requests.get(info['Medium'])
     col1,col2 = st.columns([0.95, 0.05])
     with col1:
         with st.expander('Display my latest posts'):
