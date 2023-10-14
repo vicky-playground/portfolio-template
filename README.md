@@ -6,8 +6,7 @@ Sample questions to ask the chatbot:
 - what's her contact?
 - what's her hobby?
 - what's her education background?
-![ezgif com-video-to-gif](https://github.com/vicky-playground/portfolio-template/assets/90204593/23db4f78-23c8-44ce-8172-1a66e97ef0ca)
-
+![ezgif com-video-to-gif (1)](https://github.com/vicky-playground/portfolio-template/assets/90204593/c60f52a9-7026-43ae-a7f3-89cacc730b2d)
 
 
 # Tutorial
