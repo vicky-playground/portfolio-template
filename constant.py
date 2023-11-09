@@ -3,7 +3,7 @@ info = {
    "Name": "Vicky",
    "Full_Name": "Vicky Kuo",
    "Intro": "A Tech Educator and AI Enthusiast at cognitiveclass.ai",
-   "About":"Hey there, I'm Vicky! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my free courses and projects on cognitiveclass.ai🚀",
+   "About":"Hey there, I'm Vicky! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my free courses and projects on cognitiveclass.ai: https://cognitiveclass.ai/",
    "Tableau":"https://public.tableau.com/app/profile/vickytc/viz/SunnybrookTeam/Overview",
    "Medium":"https://medium.com/@vicky-note/about",
    "City":"Toronto, Canada",
