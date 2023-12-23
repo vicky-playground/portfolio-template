@@ -1,14 +1,14 @@
-About Vicky:
-Vicky is a seasoned professional with expertise in AI, Data Science, Blockchain, and Cloud technologies. Holding an undergraduate degree in Computer Science from the University of Techville (2010), Vicky is committed to delivering innovative solutions and offers valuable resources at cognitiveclass.ai.
+About Sohaib:
+Sohaib stands as an accomplished Data and Machine Learning Engineer, with over a decade of professional experience specializing in the development of advanced Big Data pipelines and the implementation of scalable ETL processes, data modeling, and warehousing solutions. His expertise spans across Python, SQL, and key Big Data tools such as Apache Spark, Hadoop, and AWS. In the realm of computer vision, Sohaib possesses deep expertise in a broad spectrum of algorithms, including object detection, classification, action recognition, and activity recognition. Recently, he has expanded his skill set with Large Language Models (LLMS), enhancing data insights in vision-based projects. This advancement underscores his commitment to integrating the latest AI and ML technologies for innovative, effective solutions. Renowned for his exceptional problem-solving skills and collaborative spirit, Sohaib consistently delivers high-quality, timely projects and has a proven track record in leading teams to deliver comprehensive end-to-end projects.
 
 Work Experience:
-Data Scientist at IBM (2015-2019); Software Developer at IBM (2010-2015)
+AI DEPARMENT LEAD DARVIS (2022-PRESENT); PRINCIPAL MACHINE LEARNING ENGINEER at DARVIS (2021-2022)
 
 Career Goal:
-Vicky's career goal is to leverage their expertise in AI and emerging technologies to drive meaningful innovation and create solutions that positively impact businesses and society.
+Sohaib's aim is to leverage his extensive expertise in data engineering, computer vision, and Large Language Models (LLMs) to innovatively solve machine learning-based problems. He is committed to utilizing his knowledge to implement automation in various sectors, striving to enhance efficiency and accuracy. Sohaib's aspiration lies in integrating cutting-edge technologies to address complex challenges, driving transformation and delivering impactful advancements in the diverse landscape of AI applications across industries.
 
 Skills: 
-AI, Data Science, Blockchain, Cloud, Python
+AI, Machine Learning, Data Engineering, Devops
 
 Certification:
 IBM Applied AI Professional Certificate (2023)
@@ -18,24 +18,23 @@ Spearheaded AI projects at IBM, resulting in a 30% increase in user engagement.
 Utilized IBM's watsonx service to help over 1000 companies from various domains automate their HR processes, from hiring to onboarding, contributing to a 100% positive feedback rate from companies.
 
 Contact:
-LinkedIn: https://www.linkedin.com/in/vicky-tck
-Phone: 123-456-789
-Location: Toronto, Ontario
+https://www.linkedin.com/in/muhammad-sohaib-624b0688/
+Email: sohaib867@gmail.com
 
 Strengths and Advantages:
-Vicky's strengths lie in a profound passion for technology, innovative problem-solving, and client-centric solutions.
+Sohaib's strengths lie in a profound passion for technology, innovative problem-solving, and client-centric solutions.
 
 Weaknesses and Disadvantages:
-Vicky's unwavering pursuit of excellence may occasionally lead to in-depth analysis, but it ensures the delivery of high-quality services.
+Sohaib's unwavering pursuit of excellence may occasionally lead to in-depth analysis, but it ensures the delivery of high-quality services.
 
 Interests and Hobbies:
-Vicky's passion for technology extends into leisure hours, where they delve into the cutting-edge realm of GenAI, continuously pushing the boundaries of what can be achieved in various projects. In addition, Vicky finds joy in the simple pleasures of life, such as walking their dogs, swimming, and sharing coffee moments with friends and family.
+Sohaib's passion for technology extends into leisure hours, where they delve into the cutting-edge realm of GenAI, continuously pushing the boundaries of what can be achieved in various projects. In addition, Sohaib finds joy in the simple pleasures of life, such as walking their dogs, swimming, and sharing coffee moments with friends and family.
 
 Portfolio:
-Explore Vicky's portfolio of innovative projects at cognitiveclass.ai, showcasing expertise and tailored solutions. This website also serves as a showcase for some of Vicky's remarkable projects. Constructed using generative AI and Python, the website aims to inspire visitors with innovative ideas on seamlessly integrating generative AI into their own portfolio websites. Feel free to explore and ignite your creativity!
+Explore Sohaib's portfolio of innovative projects at cognitiveclass.ai, showcasing expertise and tailored solutions. This website also serves as a showcase for some of Sohaib's remarkable projects. Constructed using generative AI and Python, the website aims to inspire visitors with innovative ideas on seamlessly integrating generative AI into their own portfolio websites. Feel free to explore and ignite your creativity!
 
 Availability:
-Vicky is actively seeking new opportunities and is ready to start immediately.
+Sohaib is actively seeking new opportunities and is ready to start immediately.
 
 References:
 References are available upon request.
